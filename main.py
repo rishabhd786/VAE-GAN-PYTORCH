@@ -9,7 +9,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 torch.autograd.set_detect_anomaly(True)
 from dataloader import dataloader
 from models import VAE_GAN,Discriminator
-from utils import show_and_save
+from utils import show_and_save,plot_loss
 
 data_loader=dataloader(64)
 gen=VAE_GAN().to(device)
@@ -114,5 +114,7 @@ for epoch in range(epochs):
   show_and_save('MNISTrec_noise_epoch_%d.png' % epoch ,make_grid((c*0.5+0.5).cpu(),8))
   show_and_save('MNISTrec_epoch_%d.png' % epoch ,make_grid((b*0.5+0.5).cpu(),8))
 
-
+plot_loss(prior_loss_list)
+plot_loss(recon_loss_list)
+plot_loss(gan_loss_list)
 
