@@ -152,13 +152,21 @@ Estimated Total Size (MB): 483.53
 ```
 # Results
 
-## Generated images after 25 epochs
+## Generated images after 25 epochs(MNIST)
 
 ![4](./images/MNISTrec_noise_epoch_24.png.png)
 
-## Reconstructed images after 25 epochs
+## Reconstructed images after 25 epochs(MNIST)
 
 ![4](./images/MNISTrec_epoch_24.png.png)
+
+## Generated images after 30 epochs(CIFAR10)
+
+![4](./images/rec_epoch_28.png.png)
+
+## Reconstructed images after 30 epochs(CIFAR10)
+
+![4](./images/rec_epoch_32.png.png)
 
 ## Plot of Prior Loss vs Iterations
 
